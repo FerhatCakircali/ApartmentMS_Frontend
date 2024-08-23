@@ -1,4 +1,5 @@
-1 - Backend kısmında gerekli işlemleri yaptıktan sonra terminal'e
+1 - Backend ( https://github.com/FerhatCakircali/ApartmentMS_Backend ) kısmında gerekli işlemleri yaptıktan sonra ApartmentMS_Frontend
+klasörünün içinde terminal'e
 
 npm install
 npm start 
