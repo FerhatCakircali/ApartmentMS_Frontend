@@ -1,0 +1,172 @@
+/* Genel Panel Stilleri */
+.resident-panel {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #5177c5, #703eac);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden; /* Arka plan görseli varsa taşmayı önler */
+}
+
+/* Sekme Düzeni */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #dee2e6;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 900px;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tabs button {
+    background-color: transparent;
+    border: none;
+    padding: 16px 24px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: #4d4957;
+    transition: color 0.3s, border-bottom 0.3s, background-color 0.3s, transform 0.3s;
+    border-radius: 8px;
+    border: 2px solid transparent; /* Sekme kenarlıklarının geçişi için */
+}
+
+.tabs button.active {
+    color: #ffffff;
+    border-bottom: 4px solid #007bff;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+}
+
+.tabs button:hover {
+    color: #ffffff;
+    background-color: #0056b3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Sekme İçeriği */
+.tab-content {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    margin-top: 80px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* İçerik Başlıkları */
+.tab-content h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #343a40;
+    font-weight: 700;
+    padding-bottom: 10px;
+    background: linear-gradient(to right, #ffffff, #f1f1f1);
+    transition: background-color 0.3s, border-bottom 0.3s;
+}
+
+.tab-content h2:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tablo Stilleri */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 14px;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+th {
+    background-color: #f1f1f1;
+    color: #343a40;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e9ecef;
+}
+td:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s, transform 0.3s;
+    transform: scale(1.01);
+}
+
+/* Profil Bölümü */
+.profil {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Profil bölümünün tam genişlikte olmasını sağlar */
+    max-width: 1200px; /* Panel genişliğinden fazla olmasını engeller */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Profil bilgileri arasında boşluk bırakır */
+}
+
+/* Profil Bilgileri */
+.profil-info {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.profil-info label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 6px;
+}
+
+.profil-info p {
+    font-size: 16px;
+    color: #495057;
+    margin: 0;
+}
+
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
